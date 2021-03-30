@@ -1,0 +1,151 @@
+body {
+  background-color: #202020;
+  color: #ddd;
+  font-family: sans-serif;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1400px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  background-image: url("../images/pexels-stanislav-kondratiev-2908984.jpg");
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ddd;
+  padding: 10px;
+}
+
+nav #nav-title {
+  font-variant: small-caps;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+@media screen and (max-width: 480px) {
+  nav #nav-title {
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
+nav #menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav #menu .menu-button {
+  display: block;
+  margin: 0 10px;
+}
+
+nav #menu .menu-button a {
+  display: inline-block;
+  padding: 0 5px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 480px) {
+  nav #menu {
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
+.wrapper {
+  margin: auto;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  overflow: hidden;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 3px;
+  display: block;
+  max-width: 900px;
+  margin: 40px auto;
+  text-shadow: 0 0 10px black;
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 5rem;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    padding: 5px;
+  }
+}
+
+.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 350px;
+  margin: 20px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.actions .action-button {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  width: 40%;
+  margin: 5% auto;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.4rem;
+}
+
+.actions #sell {
+  border: 2px solid #202020;
+  color: #202020;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.actions #sell:hover, .actions #sell:active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.actions #search {
+  border: 2px solid #ccc;
+  color: #ddd;
+}
+
+.actions #search:hover, .actions #search:active {
+  background-color: rgba(0, 0, 0, 0.5);
+}

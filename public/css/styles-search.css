@@ -1,0 +1,45 @@
+#cont-tabla {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#cont-tabla p {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#cont-tabla .result-table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#cont-tabla .result-table th {
+  background-color: #aaa;
+}
+
+#cont-tabla .result-table th, #cont-tabla .result-table td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+#cont-tabla .result-table td.match {
+  background-color: #f7d493;
+  font-weight: bold;
+}
+
+#search-message p {
+  text-align: center;
+  font-size: 1.2em;
+}

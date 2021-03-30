@@ -1,0 +1,37 @@
+#cont-tabla {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & p {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  & .result-table {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+    & th {
+      background-color: #aaa;
+    }
+
+    & th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+
+    & td.match {
+      background-color: #f7d493;
+      font-weight: bold;
+    }
+  }
+}
+
+#search-message p {
+  text-align: center;
+  font-size: 1.2em;
+
+}

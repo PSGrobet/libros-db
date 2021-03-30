@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #202020;
+  background-color: #eee;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #3e3e9b;
+  font-weight: bold;
+}
+a:hover, a:active {
+  color: #5353f3;
+}
+
+.main {
+  padding: 20px;
+}
+
+
+
+
+// Estilos para register.php y login.php
+
+.container-form {
+  display: block;
+  width: 350px;
+  margin: 40px auto;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  padding: 20px;
+
+  & .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+
+    & label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+  }
+
+  & #buttons {
+    flex-direction: row;
+    justify-content: center;
+
+    & input {
+      margin: 10px;
+    }
+
+    & input[type="text"], input[type="password"] {
+      padding: 5px;
+    }
+  }
+
+  p {
+    text-align: center;
+    margin: 10px;
+  }
+
+  input[type="submit"], input[type="reset"] {
+    font-family: "Roboto", sans-serif;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-color: #323241;
+    border-radius: 5px;
+    box-shadow: 0 0 1px black;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #ddd;
+  }
+
+  .form-group {
+    padding: 5px;
+  }
+
+  .has-error input {
+    border: 1px solid rgba(255, 0, 0, 0.39);
+    padding: 5px;
+  }
+  .has-error .help-block {
+    font-size: 1em;
+    font-family: monospace;
+    color: red;
+    text-align: center;
+  }
+  
+}
+
+.container-search {
+  display: block;
+  width: 350px;
+  margin: 30px auto;
+
+  & .form-group {
+    display: flex;
+    align-items: center;
+
+    & input[type="search"] {
+      padding: 10px;
+      width: 350px;
+      position: relative;
+      left: 16px;
+    }
+
+    & button[type="submit"] {
+      width: 30px;
+      height: 30px;
+      //margin-left: 10px;
+      padding: 5px;
+      border: none;
+      background-color: transparent;
+      left: -16px;
+      cursor: pointer;
+
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+  }
+}
+//
+
+.page-header {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  border-bottom: 1px solid #323241;
+
+  & .titulo {
+    text-align: center;
+    font-size: 2em;
+  }
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+
+  & .boton {
+    display: block;
+    padding: 5px 10px;
+    margin: 20px;
+    border-radius: 2px;
+    box-shadow: 0 0 2px black;
+
+  }
+
+  & .salir {
+    border:1px solid rgb(163, 0, 0);
+    cursor: pointer;
+  }
+
+  & .salir:hover {
+    background-color: rgb(194, 194, 194);
+  }
+}
+
+

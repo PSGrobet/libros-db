@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #202020;
+  background-color: #eee;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #3e3e9b;
+  font-weight: bold;
+}
+
+a:hover, a:active {
+  color: #5353f3;
+}
+
+.main {
+  padding: 20px;
+}
+
+.container-form {
+  display: block;
+  width: 350px;
+  margin: 40px auto;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
+  padding: 20px;
+}
+
+.container-form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
+}
+
+.container-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.container-form #buttons {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-form #buttons input {
+  margin: 10px;
+}
+
+.container-form #buttons input[type="text"], .container-form #buttons input[type="password"] {
+  padding: 5px;
+}
+
+.container-form p {
+  text-align: center;
+  margin: 10px;
+}
+
+.container-form input[type="submit"], .container-form input[type="reset"] {
+  font-family: "Roboto", sans-serif;
+  padding: 10px 20px;
+  border: 1px solid;
+  border-color: #323241;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 1px black;
+          box-shadow: 0 0 1px black;
+  cursor: pointer;
+}
+
+.container-form input[type="submit"]:hover, .container-form input[type="reset"]:hover {
+  background-color: #ddd;
+}
+
+.container-form .form-group {
+  padding: 5px;
+}
+
+.container-form .has-error input {
+  border: 1px solid rgba(255, 0, 0, 0.39);
+  padding: 5px;
+}
+
+.container-form .has-error .help-block {
+  font-size: 1em;
+  font-family: monospace;
+  color: red;
+  text-align: center;
+}
+
+.container-search {
+  display: block;
+  width: 350px;
+  margin: 30px auto;
+}
+
+.container-search .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-search .form-group input[type="search"] {
+  padding: 10px;
+  width: 350px;
+  position: relative;
+  left: 16px;
+}
+
+.container-search .form-group button[type="submit"] {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  left: -16px;
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-header {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  border-bottom: 1px solid #323241;
+}
+
+.page-header .titulo {
+  text-align: center;
+  font-size: 2em;
+}
+
+.acciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 0px;
+}
+
+.acciones .boton {
+  display: block;
+  padding: 5px 10px;
+  margin: 20px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 2px black;
+          box-shadow: 0 0 2px black;
+}
+
+.acciones .salir {
+  border: 1px solid #a30000;
+  cursor: pointer;
+}
+
+.acciones .salir:hover {
+  background-color: #c2c2c2;
+}

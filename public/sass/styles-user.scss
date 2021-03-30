@@ -1,0 +1,53 @@
+
+
+
+.b-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;  
+
+
+  & h2 {
+    margin: 20px;
+  }
+
+  .tabla {
+    // display: block;
+    // margin: auto;
+
+    // #cont-tabla {
+    //   width: 600px;
+    //   height: 400px;
+    //   overflow-x: scroll
+    // }
+
+    table.books-table {
+
+      border: 1px solid black;
+      border-collapse: collapse;
+      display: inline-block;
+      max-height: 400px;
+      max-width: 600px;
+      overflow-y: scroll;
+    
+      & th, td {
+        border: 1px solid black;
+        padding: 5px;
+      }
+    
+      & th {
+        background-color: #bbb;
+      }
+    
+    }
+    
+  }
+
+  .form-add {
+    & form input {
+      display: block;
+      margin: 5px 0 0 20px;
+    }
+  }
+}
+

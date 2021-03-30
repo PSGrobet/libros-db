@@ -1,0 +1,36 @@
+.b-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.b-container h2 {
+  margin: 20px;
+}
+
+.b-container .tabla table.books-table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  display: inline-block;
+  max-height: 400px;
+  max-width: 600px;
+  overflow-y: scroll;
+}
+
+.b-container .tabla table.books-table th, .b-container .tabla table.books-table td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.b-container .tabla table.books-table th {
+  background-color: #bbb;
+}
+
+.b-container .form-add form input {
+  display: block;
+  margin: 5px 0 0 20px;
+}
