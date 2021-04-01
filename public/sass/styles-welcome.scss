@@ -33,6 +33,7 @@
       @media screen and (max-width: 480px) {
         width: 100%;
         padding-top: 10px;
+        text-align: center;
       }
     }
 
@@ -71,6 +72,10 @@
     overflow: hidden;
 
     padding: 2rem;
+
+    @media screen and (max-width: 480px) {
+      padding: 0;
+    }
   }
 
   h1 {
@@ -96,6 +101,7 @@
 
   .actions {
     display: flex;
+    flex-wrap: wrap;
     width: 350px;
     margin: 20px auto;
     justify-content: space-between;
@@ -133,6 +139,8 @@
         background-color: rgba(0,0,0,0.5);
       }
     }
+
+    
 
   }
 

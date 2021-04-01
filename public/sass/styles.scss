@@ -21,6 +21,10 @@ a:hover, a:active {
 
 .main {
   padding: 20px;
+
+  @media screen and (max-width: 480px) {
+    padding: 0;
+  }
 }
 
 
@@ -32,9 +36,9 @@ a:hover, a:active {
   display: block;
   width: 350px;
   margin: 40px auto;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  box-shadow: 0 0 5px black;
+  // border: 1px solid #aaa;
+  border-radius: none;
+  // box-shadow: 0 0 2px black;
   padding: 20px;
 
   & .form-group {
@@ -50,6 +54,10 @@ a:hover, a:active {
 
   }
 
+  & input[type="text"], input[type="password"], input[type="email"] {
+    padding: 5px;
+  }
+
   & #buttons {
     flex-direction: row;
     justify-content: center;
@@ -58,9 +66,7 @@ a:hover, a:active {
       margin: 10px;
     }
 
-    & input[type="text"], input[type="password"] {
-      padding: 5px;
-    }
+    
   }
 
   p {
@@ -96,6 +102,11 @@ a:hover, a:active {
     text-align: center;
   }
   
+  @media screen and (max-width: 480px) {
+    border: none;
+    box-shadow: none;
+    padding: 10px;
+  }
 }
 
 .container-search {

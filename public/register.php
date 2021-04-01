@@ -4,7 +4,7 @@ require_once "config.php";
 
 //Define variables with empty values
 $username = $password = $confirm_password = "";
-$username_err = $password_err = $confirm_password_err = ""; 
+$username_err = $email_err = $password_err = $confirm_password_err = ""; 
 
 // Process form data when submitted
 if($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -42,6 +42,15 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     }
   }
 
+  // Validate email
+  if(empty(trim($_POST['email']))) {
+    $email_err = "Por favor escribe un correo electrónico";
+  } else {
+    $email = trim($_POST['email']);
+  }
+
+
+
   // Validate password
   if(empty(trim($_POST['password']))) {
     $password_err = "Escribe una contraseña de 8 caracteres o más.";
@@ -62,17 +71,18 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
   }
 
   // Check input errors before inserting into database
-  if(empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
+  if(empty($username_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)) {
 
     //Prepare statement
-    $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+    $sql = "INSERT INTO users (username, user_email, password) VALUES (?, ?, ?)";
 
     if($stmt = $mysqli->prepare($sql)) {
       // Bind parameters
-      $stmt->bind_param("ss", $param_username, $param_password);
+      $stmt->bind_param("sss", $param_username, $param_email, $param_password);
 
       //Set parameters
       $param_username = $username;
+      $param_email = $email;
       $param_password = password_hash($password, PASSWORD_DEFAULT); // crea un hash de la contraseña
 
       // Attempt to execute
@@ -102,7 +112,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css?v=1.2">
+  <link rel="stylesheet" href="./css/styles.css?v=1.4">
   <title>Registro</title>
 </head>
 <body>
@@ -116,7 +126,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         <input type="text" name="username" id="username">
         <span class="help-block"><?php echo $username_err ?></span>
       </div>
-      <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : '' ; ?>">
+      <div class="form-group <? echo (!empty($email_err)) ? 'has-error' : '' ; ?>">
+        <label for="email">Correo electrónico</label>
+        <input type="email" name="email" id="email">
+        <span class="help-block"><?php echo $email_err ?></span>
+      </div>
+      <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : '' ; ?>">
         <label for="password">Contraseña</label>
         <input type="password" name="password" id="password">
         <span class="help-block"><?php echo $password_err ?></span>

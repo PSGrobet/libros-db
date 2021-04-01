@@ -1,3 +1,9 @@
+@media screen and (max-width: 480px) {
+  .container-search {
+    padding: 0;
+  }
+}
+
 #cont-tabla {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,6 +43,13 @@
 #cont-tabla .result-table td.match {
   background-color: #f7d493;
   font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+  #cont-tabla {
+    width: 100%;
+    overflow: scroll;
+  }
 }
 
 #search-message p {

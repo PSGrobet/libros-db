@@ -40,6 +40,7 @@ if($result = $mysqli->query($sql)) {
     $message = "Parece que aún no hay libros en tu biblioteca, comienza agregando algunos.";
     
   } else {
+    $message = "";
     $books_count = $result->num_rows;
     $table = "<table class='books-table'>
                 <tr>
@@ -125,7 +126,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/styles.css?v=1.5">
-  <link rel="stylesheet" href="./css/styles-user.css?v=1.3">
+  <link rel="stylesheet" href="./css/styles-user.css?v=1.4">
   <title>Usuario</title>
 </head>
 <body>
@@ -154,7 +155,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
           <input type="number" placeholder="año" name="año">
           <input type="submit" value="añadir">
         </form>
-        <p><?php echo $message?></p>
+        <!-- <p><?php echo $message?></p> -->
       </div>
     </div>
     </main>

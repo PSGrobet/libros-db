@@ -33,4 +33,5 @@
 .b-container .form-add form input {
   display: block;
   margin: 5px 0 0 20px;
+  padding: 5px;
 }

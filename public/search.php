@@ -71,8 +71,8 @@ function match_field($field) {
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/styles.css?v=1.6">
-  <link rel="stylesheet" href="./css/styles-search.css?v=1.3">
+  <link rel="stylesheet" href="./css/styles.css?v=1.7">
+  <link rel="stylesheet" href="./css/styles-search.css?v=1.4">
   <title>Búsqueda</title>
 </head>
 <body>

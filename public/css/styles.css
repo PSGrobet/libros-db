@@ -25,14 +25,17 @@ a:hover, a:active {
   padding: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  .main {
+    padding: 0;
+  }
+}
+
 .container-form {
   display: block;
   width: 350px;
   margin: 40px auto;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px black;
-          box-shadow: 0 0 5px black;
+  border-radius: none;
   padding: 20px;
 }
 
@@ -55,6 +58,10 @@ a:hover, a:active {
   margin-bottom: 5px;
 }
 
+.container-form input[type="text"], .container-form input[type="password"], .container-form input[type="email"] {
+  padding: 5px;
+}
+
 .container-form #buttons {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -67,10 +74,6 @@ a:hover, a:active {
 
 .container-form #buttons input {
   margin: 10px;
-}
-
-.container-form #buttons input[type="text"], .container-form #buttons input[type="password"] {
-  padding: 5px;
 }
 
 .container-form p {
@@ -107,6 +110,15 @@ a:hover, a:active {
   font-family: monospace;
   color: red;
   text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .container-form {
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 10px;
+  }
 }
 
 .container-search {
